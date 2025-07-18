@@ -17,9 +17,9 @@ Spring Boot + MyBatis 기반의 간단한 게시판 웹 서비스입니다.
 |------------|------------------------------|
 | Backend    | Spring Boot 3.x, Spring MVC  |
 | ORM        | MyBatis + Mapper XML         |
-| DB         | H2 (개발용) / MySQL (운영 가능) |
+| DB         | MySQL                        |
 | Build Tool | Gradle                       |
-| View       | Thymeleaf / REST (선택형)    |
+| View       | REST                         |
 
 ---
 
@@ -55,24 +55,11 @@ cd your-repo
 
 ### 2. 설정
 
-`src/main/resources/application.yml` 또는 `.properties`에서 DB 설정 확인:
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-```
+`src/main/resources/application.yml` 또는 `.properties`에서 DB 설정 확인
 
 ### 3. 실행
 
-```bash
-./gradlew bootRun
-```
-
-혹은 IntelliJ/Eclipse에서 `ServerApplication.java` 실행
+IntelliJ/Eclipse에서 `JpaApplication.java` 실행
 
 ### 4. 접속
 
